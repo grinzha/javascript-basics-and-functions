@@ -1,92 +1,111 @@
-# JavaScript basics and functions
+### Блок 2.2: Основы JS + Функции
 
+Гуглим как установить Node.js и запустить js файл.
+[Знакомство с функциями](https://learn.javascript.ru/function-basics)
+[Function-expressions](https://learn.javascript.ru/function-expressions)
+[Arrow-functions](https://learn.javascript.ru/arrow-functions-basics)
+[Массивы](https://learn.javascript.ru/array)
+[Методы примитивов](https://learn.javascript.ru/primitives-methods)
 
+#### Внимание:
+- Если материал показался вам не понятен - ищем в других источниках. В полиморфизм, диспетчеризацию и остальной computer science не углубляемся.
+- В файловой структуре есть папка `__tests__`, где можно посмотреть проверки для вашего решения
 
-## Getting started
+#### Доп. материалы:
+- [Числа](https://learn.javascript.ru/number)
+- [var, let и const](https://medium.com/nuances-of-programming/%D0%B2-%D1%87%D1%91%D0%BC-%D1%80%D0%B0%D0%B7%D0%BD%D0%B8%D1%86%D0%B0-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-var-let-%D0%B8-const-%D0%B2-javascript-3084bfe9f7a3)
+- [Функции](https://learn.javascript.ru/es-function)
+- [Шаблон раннего возврата](http://gearmobile.github.io/javascript/early-return/)
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+#### Темы для ревью:
+- Хранение чисел, неточные вычисления
+- Ошибки
+- Рекурсия
+- Замыкания и область видимости
+- Различия var/let/const, hoisting
+- Модули / экспорты
+- Побочные эффекты, чистота функций
+- Guard Expression / ранний возврат
+- Значения по умолчанию
+- Функции высшего порядка
+- Отличия стрелочных функций от обычных
+- map / filter / reduce / forEach / find / flat / includes / indexOf / join / slice / splice / sort
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+#### Задание
+Разминка: несколько простых задач
+Решаем задачки по очереди и учимся разбивать код на отдельные функции, называем переменные понятными именами, следим за отступами.
 
-## Add your files
+- [Hello Word!](https://codesandbox.io/s/hello-world-forked-knm77f)
+- [Лазанья](https://codesandbox.io/s/sochnaya-lazanya-mayka-forked-u13fr4)
+- [Спасение из темницы](https://codesandbox.io/s/inspiring-river-n98ne1)
+- [Калькулятор стоимости услуг](https://codesandbox.io/s/kalkulyator-stoimosti-uslug-04-forked-qt2tev)
+- [Правила посещения Поэтического клуба](https://codesandbox.io/s/pravila-poseshcheniya-poeticheskogo-kluba-forked-n7l7cu)
+- [Чары Элиз](https://codesandbox.io/s/chary-eliz-06-forked-uymziq)
+- [Покупка автомобиля](https://codesandbox.io/s/pokupka-avtomobilya-07-forked-xj61iu)
+- [Наблюдение за птицами](https://codesandbox.io/s/08-nablyudenie-za-pticami-forked-gwchsx)
+- [Смешанные соки](https://codesandbox.io/s/09-smeshannye-soki-forked-ryozoy?file=/src/index.js)
+- [Доска рекордов](https://codesandbox.io/s/10-doska-rekordov-forked-yn4so6)
+- [Парк аттракционов](https://codesandbox.io/s/11-park-attrakcionov-forked-uts62f)
+- [Счастливые числа](https://codesandbox.io/s/12-schastlivye-chisla-forked-q2b66w)
+- [Мастер Лазаньи](https://codesandbox.io/s/13-master-lazani-forked-6cwyek)
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+Дальше перехоим к задачкам изволженных папок.
+
+## Папка "problems" содержит задачи с тестами, как этим пользоваться:
+# js-problems
+
+Оттачивай навыки алгоритмики и кодирования.
+
+В этом репозитории собраны задачи, решение которых поможет закрепить навыки программирования и подготовиться к техническим собеседованиям.
+
+Вместе с задачами поставляется система для автоматической проверки решений написанных на JavaScript.
+
+## Предварительные настройки
+
+1. Убедись, что [git](https://git-scm.com/downloads) и [node](https://nodejs.org/en/download/) v10.13.0+ установлены на твоем компьютере
+2. Склонируй репозиторий
+3. В папке с проектом из терминала выполни `npm i`
+
+Теперь можно приступать к решению задач!
+
+## Задачник
+
+Задачи находятся в папке [/problems](/problems). Каждая задача оформлена в виде отдельного `.js` файла.
+
+Каждый файл имеет следующую структуру:
+
+1. Комментарий с
+    - описанием условия задачи
+    - примером вызова функции, передаваемых аргументов и ожидаемым результатом
+    - JSDoc для параметров и возвращаемого функцией значения
+2. Заглушка тела функции. Пиши свое решение здесь
+3. Инструкция `module.exports = …` делает функцию доступной для автоматического тестирования
+
+## Тестирование решений
+
+Система автоматичекой проверки решений может быть запущена в одном из двух режимов.
+
+### Ручная проверка
+
+Запускается командой
 
 ```
-cd existing_repo
-git remote add origin https://git.it-mentor.tech/javascriptcore/javascript-basics-and-functions.git
-git branch -M main
-git push -uf origin main
+npm run test
 ```
 
-## Integrate with your tools
+Эта команда проверит правильность решений для всех файлов в которые были внесены изменения и git статус которых `not staged for commit`.
 
-- [ ] [Set up project integrations](https://git.it-mentor.tech/javascriptcore/javascript-basics-and-functions/-/settings/integrations)
+### Автоматическая проверка
 
-## Collaborate with your team
+Запускается командой
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+```
+npm run test:watch
+```
 
-## Test and Deploy
+Эта проверка работает по тому же принципу, что и ручная, только тесты запускаются автоматически на каждое сохранение файла.
 
-Use the built-in continuous integration in GitLab.
+Решение задачи должно быть в файле с задачей(там где нет тестов, для проверки используйте console.log())
+Используем методы массивов по максимуму.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## Удачи! Да прибудет с вами console.log =)
