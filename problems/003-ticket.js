@@ -14,7 +14,26 @@
  * @returns {boolean}
  */
 function checkTicket(number) {
-    return undefined;
+    let numLeft;
+    let numRight;
+
+    numLeft = number.slice(0, 3);
+    numRight = number.slice(3, 6);
+    let arrLeftString = numLeft.split("");
+    let arrRightString = numRight.split("");
+
+    let arrLeftSum = 0;
+    let arrRightSum = 0;
+
+    for (let i = 0; i < arrLeftString.length; i++) {
+        arrLeftSum += +arrLeftString[i];
+    }
+    for (let i = 0; i < arrRightString.length; i++) {
+        arrRightSum += +arrRightString[i];
+    }
+
+    return arrLeftSum === arrRightSum ? true : false;
+
 }
 
 module.exports = checkTicket;
