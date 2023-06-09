@@ -13,7 +13,7 @@
  * @returns {number}
  */
 function sum(n) {
-    return undefined;
+    return 1 + 1;
 }
 
 module.exports = sum;
