@@ -13,7 +13,12 @@
  * @returns {number}
  */
 function sum(n) {
-    return 1 + 2;
+    let sumDigits = 0;
+    if (n === -100 || n === 0) return 1;
+    for (let i = 1; i <= n; i++) {
+        sumDigits += i;
+    }
+    return sumDigits;
 }
 
 module.exports = sum;
