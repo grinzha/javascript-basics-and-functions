@@ -13,18 +13,23 @@
  * @returns {number[]}
  */
 function union(a, b) {
-    let arrResult = [];
-    for (let i = 0; i < a.length; i++) {
-        for (let k = 0; k < b.length; k++) {
-            if (a[i] === b[k]) {
-                arrResult.push(a[i]);
-            }
-        }
-    }
-    arrResult.sort(function (a, b) {
-        return a-b;
-    })
-    return arrResult;
+    // let arrResult = [];
+    // for (let i = 0; i < a.length; i++) {
+    //     for (let k = 0; k < b.length; k++) {
+    //         if (a[i] === b[k]) {
+    //             arrResult.push(a[i]);
+    //         }
+    //     }
+    // }
+    // arrResult.sort(function (a, b) {
+    //     return a-b;
+    // })
+    // return arrResult;
+
+    let new_arr = a.filter(item => b.includes(item));
+
+    new_arr.sort((a, b) => a-b);
+    return[... new Set (new_arr)];
 }
 
 module.exports = union;
