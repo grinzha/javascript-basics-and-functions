@@ -20,4 +20,4 @@ function union(a, b) {
     return[... new Set (new_arr)];
 }
 
-module.exports = union([1, 1, 3, 2, 5], [5, 3, 7, 7]);
+module.exports = union;
