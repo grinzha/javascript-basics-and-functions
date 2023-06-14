@@ -12,7 +12,13 @@
  * @returns {number|undefined}
  */
 function getPower(n) {
-    return -1;
+    let pow = 0;
+    while (2**pow <= n) {
+        if (2**pow === n) return pow;
+        else if (2**pow > n) return undefined;
+        pow++;
+    }
+    // return Math.log2(n)
 }
 
 module.exports = getPower;
