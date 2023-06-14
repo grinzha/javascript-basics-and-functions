@@ -16,7 +16,23 @@
  * @returns {string}
  */
 function decrypt(secret) {
-    return undefined;
+    // let arrFromStr = [];
+    // arrFromStr = secret.split('');
+    //
+    // for (let i = 0; i < arrFromStr.length; i++) {
+    //     arrFromStr[i] = String.fromCharCode(arrFromStr[i].charCodeAt(arrFromStr[i]) + 1);
+    // }
+    //
+    // let strFromArr = arrFromStr.join('');
+    //
+    // return strFromArr.replace(/{/gi, 'a').replace(/!/g,String.fromCharCode(32));
+
+    let arrFromStr = secret.split('');
+    let result;
+
+    result = arrFromStr.map(element => String.fromCharCode(element.charCodeAt(0) + 1)).join("");
+
+    return result.replace(/{/g, 'a').replace(/!/g, String.fromCharCode(32));
 }
 
 module.exports = decrypt;
