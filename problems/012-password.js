@@ -44,4 +44,15 @@ function validatePassword(password) {
     return true;
 }
 
+/*function validatePassword(password) {
+    let arrFromStr = [...password];
+    let ascii = arrFromStr.map((value) => {
+        (value.charCodeAt(0));
+    });
+    const isUpperCase = ascii.find(value => (value >= 65 && value <= 90));
+    const isLowerCase = ascii.find(value => (value >= 97 && value <= 122));
+    const isDigit = ascii.find(value => (value >= 48 && value <= 57));
+    return Boolean (isUpperCase && isLowerCase && isDigit);
+
+}*/
 module.exports = validatePassword;
